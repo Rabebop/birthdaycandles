@@ -44,12 +44,16 @@ body {
 
 }
 #subTitle {
-  font-size: 18px;
+  font-size: clamp(11px, 3.5vw, 18px);
   font-family: 'Pixelify Sans', sans-serif;
   color: #555;
-  /* aggiungi queste due righe: */
+  max-width: 100%;
+  width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
   word-break: break-word;
-  max-width: 90vw;
+  box-sizing: border-box;
+  padding: 0 8px;
 }
 @keyframes cake {
   0%,
