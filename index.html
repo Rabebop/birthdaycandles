@@ -62,13 +62,13 @@
     <script>
       // === Params ===
       const params = new URLSearchParams(window.location.search);
-      const name = params.get("name") || "Friend";
+      const name = params.get("name") || "Gnomo";
       let candleCount = parseInt(params.get("candles")) || 4;
       candleCount = Math.min(Math.max(candleCount, 1), 30);
 
       document.getElementById("birthdayText").innerHTML = `
-        <div id="mainTitle">Happy Birthday, ${name}!</div>
-        <div id="subTitle">Make a wish and blow out the candles! 🎂</div>
+        <div id="mainTitle">Tanti auguri, ${name}!</div>
+        <div id="subTitle">Esprimi un desiderio e spegni le candeline! 🎂</div>
       `;
 
       const cake = document.getElementById("cake");
@@ -123,10 +123,10 @@
 
         if (document.querySelectorAll(".candle:not(.blown)").length === 0) {
           allBlown = true;
-          micStatus.textContent = "🎉 Wish granted!";
+          micStatus.textContent = "🎉 Desiderio esaudito!";
           setTimeout(() => {
             document.getElementById("subTitle").textContent =
-              "Yayy! Wishing you the happiest birthday ever!! 🎉";
+              "Yayy! Ti auguro il compleanno più pazzesco di sempre!!! 🎉";
           }, 400);
           // Ferma il loop
           if (animFrameId) cancelAnimationFrame(animFrameId);
