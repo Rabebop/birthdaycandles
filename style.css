@@ -43,7 +43,14 @@ body {
   overflow: visible; /* allow candles to "escape" */
 
 }
-
+#subTitle {
+  font-size: 18px;
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #555;
+  /* aggiungi queste due righe: */
+  word-break: break-word;
+  max-width: 90vw;
+}
 @keyframes cake {
   0%,
   50% {
